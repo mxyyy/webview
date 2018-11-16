@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/path_et"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="输入访问网址,直接从www开始即可"/>
+        <Button
+            android:onClick="load"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="加载"/>
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/show_wb"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="match_parent">
+    </WebView>
+
+    <Button
+        android:onClick="call"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="调用js的方法"/>
+
+
+</LinearLayout>
